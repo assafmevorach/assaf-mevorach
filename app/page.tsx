@@ -419,7 +419,7 @@ export default function Home() {
                 <div className="rounded-2xl border border-white/10 bg-ink p-7">
                   <h3 className="font-display text-xl text-cream">Guest Lecturer</h3>
                   <p className="mt-3 text-sand">
-                    Twice invited to guest-lecture at Portland State University.
+                    Guest lecturer at Portland State University.
                   </p>
                 </div>
               </Reveal>
@@ -432,16 +432,55 @@ export default function Home() {
                   </p>
                 </div>
               </Reveal>
+              <Reveal delay={260}>
+                <div className="rounded-2xl border border-white/10 bg-ink p-7">
+                  <h3 className="font-display text-xl text-cream">TLV Nights</h3>
+                  <p className="mt-3 text-sand">
+                    A dinner event hosted by Assaf with chef Itzik Steinberg,
+                    held April 19, 2025 at The Side Bar in Portland.
+                  </p>
+                </div>
+              </Reveal>
             </div>
             <Reveal delay={120}>
-              <div className="mt-10 rounded-2xl border border-white/10 bg-ink p-7">
+              <a
+                href="https://assaf1.substack.com"
+                target="_blank"
+                rel="noreferrer"
+                className="group mt-10 block rounded-2xl border border-white/10 bg-ink p-7 transition-colors hover:border-glow/40"
+              >
                 <h3 className="font-display text-xl text-cream">Writing</h3>
                 <p className="mt-3 text-sand">
                   I write on Substack about AI orchestration and product
                   development: how agentic systems change the way we build.
                 </p>
-              </div>
+                <p className="mt-4 flex items-center gap-1.5 text-sm text-sand/70 transition-colors group-hover:text-glow">
+                  Read on Substack
+                  <ArrowIcon className="h-3.5 w-3.5" />
+                </p>
+              </a>
             </Reveal>
+            <div className="mt-14">
+              <Reveal>
+                <Eyebrow>Party timeline</Eyebrow>
+              </Reveal>
+              <ol className="mt-14 space-y-0">
+                {[
+                  { date: "October 30, 2025", name: "Halloween Rocks, Barrel Room" },
+                  { date: "December 13, 2025", name: "Hanukkah Rave, Barrel Room (OPB’s All Things Considered covered it)" },
+                  { date: "February 27, 2026", name: "Purim Balagan, Star Theatre" },
+                ].map((event, i) => (
+                  <Reveal as="li" key={event.name} delay={i * 60}>
+                    <div className="group grid gap-2 border-t border-white/10 py-7 transition-colors last:border-b hover:border-glow/40 md:grid-cols-[220px_1fr] md:gap-8">
+                      <span className="text-sm font-semibold uppercase tracking-[0.2em] text-glow">
+                        {event.date}
+                      </span>
+                      <h3 className="font-display text-2xl text-cream">{event.name}</h3>
+                    </div>
+                  </Reveal>
+                ))}
+              </ol>
+            </div>
           </div>
         </section>
 
