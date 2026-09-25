@@ -25,3 +25,9 @@ automatic deploys on push).
 Real photos only, in `public/photos/`:
 - `headshot.jpg` — professional headshot (hero)
 - `hanukkah-rave.jpg` — Portland Hanukkah Rave (community section, credit: Eli Imadali / OPB)
+
+## Files
+
+- `public/files/Assaf-Mevorach-Resume.pdf` — one-page resume, generated from
+  verified public facts only (`/tmp/make-resume.py`, reportlab). Regenerate
+  after any career-content change.

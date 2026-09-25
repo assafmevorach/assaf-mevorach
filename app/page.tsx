@@ -14,7 +14,7 @@ const NAV = [
 
 const TIMELINE = [
   {
-    period: "2024 — Present",
+    period: "2024 to Present",
     title: "Director of Business Strategy & Software Solutions",
     detail: "Intel Client Connectivity, Hillsboro, Oregon",
   },
@@ -26,7 +26,7 @@ const TIMELINE = [
   {
     period: "Thunderbolt era",
     title: "Director of Strategic Marketing, Thunderbolt & USB4",
-    detail: "Led product and ecosystem strategy for Thunderbolt and USB4",
+    detail: "Led product and ecosystem strategy for Thunderbolt and USB4; created and launched Thunderbolt Share",
   },
   {
     period: "Connectivity era",
@@ -49,10 +49,12 @@ const PATENTS = [
   {
     number: "US 10,075,836",
     title: "Device group management",
+    href: "https://patents.google.com/patent/US10075836B2/en",
   },
   {
     number: "US 10,700,791",
     title: "Ultrasonic device onboarding",
+    href: "https://patents.google.com/patent/US10700791B2/en",
   },
 ];
 
@@ -70,6 +72,22 @@ function GitHubIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
       <path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.38.82 1.11.82 2.24v3.32c0 .32.21.7.82.58A12 12 0 0 0 12 .3z" />
+    </svg>
+  );
+}
+
+function DownloadIcon({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className={className} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+    </svg>
+  );
+}
+
+function SoundCloudIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M23.999 14.165c-.052 1.796-1.612 3.169-3.4 3.169h-8.18a.68.68 0 0 1-.675-.683V7.862a.747.747 0 0 1 .452-.724s.75-.513 2.333-.513a5.364 5.364 0 0 1 2.763.755 5.433 5.433 0 0 1 2.57 3.54c.282-.08.574-.121.868-.12.884 0 1.73.358 2.347.992s.948 1.49.922 2.373ZM10.721 8.421c.247 2.98.427 5.697 0 8.672a.264.264 0 0 1-.53 0c-.395-2.946-.22-5.718 0-8.672a.264.264 0 0 1 .53 0ZM9.072 9.448c.285 2.659.37 4.986-.006 7.655a.277.277 0 0 1-.55 0c-.331-2.63-.256-5.02 0-7.655a.277.277 0 0 1 .556 0Zm-1.663-.257c.27 2.726.39 5.171 0 7.904a.266.266 0 0 1-.532 0c-.38-2.69-.257-5.21 0-7.904a.266.266 0 0 1 .532 0Zm-1.647.77a26.108 26.108 0 0 1-.008 7.147.272.272 0 0 1-.542 0 27.955 27.955 0 0 1 0-7.147.275.275 0 0 1 .55 0Zm-1.67 1.769c.421 1.865.228 3.5-.029 5.388a.257.257 0 0 1-.514 0c-.21-1.858-.398-3.549 0-5.389a.272.272 0 0 1 .543 0Zm-1.655-.273c.388 1.897.26 3.508-.01 5.412-.026.28-.514.283-.54 0-.244-1.878-.347-3.54-.01-5.412a.283.283 0 0 1 .56 0Zm-1.668.911c.4 1.268.257 2.292-.026 3.572a.257.257 0 0 1-.514 0c-.241-1.262-.354-2.312-.023-3.572a.283.283 0 0 1 .563 0Z" />
     </svg>
   );
 }
@@ -148,9 +166,9 @@ export default function Home() {
                 Mevorach
               </h1>
               <p className="mt-8 max-w-xl text-lg leading-relaxed text-sand">
-                Director of Business Strategy @ Intel — Product Management,
-                Software Engineering Leadership, Technology Innovator.
-                Thunderbolt, Wi-Fi and Connectivity.
+                Director of Business Strategy &amp; Software Solutions at Intel.
+                Twenty-six years in product management and software engineering
+                leadership across Thunderbolt, USB4, Wi-Fi, and connectivity.
               </p>
               <p className="mt-6 max-w-xl font-display text-2xl italic leading-snug text-cream/90">
                 “I turn deep technology into products people love.”
@@ -164,6 +182,13 @@ export default function Home() {
                 >
                   <LinkedInIcon className="h-4 w-4" />
                   LinkedIn
+                </a>
+                <a
+                  href="/files/Assaf-Mevorach-Resume.pdf"
+                  className="flex items-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-cream transition-colors hover:border-glow hover:text-glow"
+                >
+                  <DownloadIcon className="h-4 w-4" />
+                  R&#233;sum&#233;
                 </a>
                 <a
                   href="https://github.com/assafmevorach"
@@ -205,22 +230,18 @@ export default function Home() {
             <div className="mt-10 grid gap-10 md:grid-cols-2">
               <Reveal delay={100}>
                 <p className="text-lg leading-relaxed text-cream/85">
-                  I am a product management and software engineering leader with
-                  over 15 years of experience, passionate about driving impactful
-                  initiatives and transforming technology and new ideas into
-                  products. Throughout my career at Intel, I have had the
-                  opportunity to lead a variety of exciting projects in domains
-                  such as Thunderbolt, Wi-Fi, and smart home solutions.
+                  I am a product management and software engineering leader,
+                  26 years at Intel. I take deep technology and turn it into
+                  products: Thunderbolt, Wi-Fi, smart home. I work directly
+                  with engineers, designers, and researchers, and I stay close
+                  to the details.
                 </p>
               </Reveal>
               <Reveal delay={200}>
                 <p className="text-lg leading-relaxed text-cream/85">
-                  I thrive in cross-functional team environments, working closely
-                  with engineers, designers, and researchers to bring innovative
-                  product features to life. One of my proudest achievements is
-                  leading the creation and market launch of Thunderbolt Share, a
-                  first-of-its-kind product in many ways. I believe in continuous
-                  learning and radical collaboration.
+                  The work I am proudest of: creating Thunderbolt Share and
+                  taking it from concept to market launch, a first-of-its-kind
+                  product and a CES 2025 Innovation Award Honoree. I ship.
                 </p>
               </Reveal>
             </div>
@@ -234,9 +255,9 @@ export default function Home() {
               <Eyebrow>Career</Eyebrow>
               <SectionTitle>Twenty-six years at Intel</SectionTitle>
               <p className="mt-6 max-w-2xl text-sand">
-                From binary instrumentation in Haifa to business strategy in
-                Hillsboro — a career built on going deep into technology, then
-                carrying it to market.
+                VTune binary instrumentation in Haifa, 2000. Business strategy
+                in Hillsboro, 2024. The throughline: go deep on the technology,
+                then carry it to market.
               </p>
             </Reveal>
             <ol className="mt-14 space-y-0">
@@ -281,11 +302,11 @@ export default function Home() {
                   Thunderbolt Share
                 </h3>
                 <p className="mt-6 max-w-3xl text-lg leading-relaxed text-cream/85">
-                  Creator, inventor, and product owner — from concept to market
+                  Creator, inventor, and product owner. Concept to market
                   launch. Thunderbolt Share lets two PCs share screens, keyboard,
-                  mouse, and files over a simple Thunderbolt connection: a new
-                  category of PC-to-PC experience, built on the Thunderbolt
-                  ecosystem I helped grow.
+                  mouse, and files over one Thunderbolt cable: a new category of
+                  PC-to-PC computing, built on the Thunderbolt ecosystem I
+                  helped grow.
                 </p>
               </article>
             </Reveal>
@@ -293,12 +314,20 @@ export default function Home() {
             <div className="mt-8 grid gap-6 md:grid-cols-3">
               {PATENTS.map((patent, i) => (
                 <Reveal key={patent.number} delay={i * 80}>
-                  <article className="h-full rounded-2xl border border-white/10 bg-ink p-7 transition-colors hover:border-glow/40">
+                  <a
+                    href={patent.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group block h-full rounded-2xl border border-white/10 bg-ink p-7 transition-colors hover:border-glow/40"
+                  >
                     <Eyebrow>US Patent</Eyebrow>
                     <h3 className="mt-3 font-display text-2xl text-cream">{patent.number}</h3>
                     <p className="mt-2 text-sand">{patent.title}</p>
-                    <p className="mt-4 text-sm text-sand/70">Named inventor</p>
-                  </article>
+                    <p className="mt-4 flex items-center gap-1.5 text-sm text-sand/70 transition-colors group-hover:text-glow">
+                      Named inventor <span aria-hidden="true">&middot;</span> View on Google Patents
+                      <ArrowIcon className="h-3.5 w-3.5" />
+                    </p>
+                  </a>
                 </Reveal>
               ))}
               <Reveal delay={160}>
@@ -325,7 +354,7 @@ export default function Home() {
             <div className="mt-12 grid gap-6 md:grid-cols-2">
               <Reveal delay={80}>
                 <a
-                  href="https://github.com/assafmevorach"
+                  href="https://gocasepilot.com/"
                   target="_blank"
                   rel="noreferrer"
                   className="group block h-full rounded-2xl border border-white/10 bg-coal/40 p-8 transition-all hover:-translate-y-1 hover:border-glow/40"
@@ -335,27 +364,19 @@ export default function Home() {
                     <ArrowIcon className="h-5 w-5 text-sand transition-all group-hover:translate-x-0.5 group-hover:text-glow" />
                   </div>
                   <p className="mt-4 leading-relaxed text-sand">
-                    A verified case wiki — structured, trustworthy case knowledge,
+                    A verified case wiki. Structured, trustworthy case knowledge,
                     productized for the people who need it.
                   </p>
                 </a>
               </Reveal>
               <Reveal delay={160}>
-                <a
-                  href="https://github.com/assafmevorach"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group block h-full rounded-2xl border border-white/10 bg-coal/40 p-8 transition-all hover:-translate-y-1 hover:border-glow/40"
-                >
-                  <div className="flex items-start justify-between">
-                    <h3 className="font-display text-3xl text-cream">Portland Divorce Directory</h3>
-                    <ArrowIcon className="h-5 w-5 text-sand transition-all group-hover:translate-x-0.5 group-hover:text-glow" />
-                  </div>
+                <article className="h-full rounded-2xl border border-white/10 bg-coal/40 p-8">
+                  <h3 className="font-display text-3xl text-cream">Portland Divorce Directory</h3>
                   <p className="mt-4 leading-relaxed text-sand">
                     A local directory connecting people with vetted divorce
                     professionals across the Portland area.
                   </p>
-                </a>
+                </article>
               </Reveal>
             </div>
           </div>
@@ -406,8 +427,8 @@ export default function Home() {
                 <div className="rounded-2xl border border-white/10 bg-ink p-7">
                   <h3 className="font-display text-xl text-cream">Party Promoter</h3>
                   <p className="mt-3 text-sand">
-                    Organizer of Portland’s Halloween, Hanukkah, and Purim dance
-                    parties — interviewed on OPB’s <em>All Things Considered</em>.
+                    Organizer of Portland&#8217;s Halloween, Hanukkah, and Purim dance
+                    parties. Interviewed on OPB&#8217;s <em>All Things Considered</em>.
                   </p>
                 </div>
               </Reveal>
@@ -417,7 +438,7 @@ export default function Home() {
                 <h3 className="font-display text-xl text-cream">Writing</h3>
                 <p className="mt-3 text-sand">
                   I write on Substack about AI orchestration and product
-                  development — how agentic systems change the way we build.
+                  development: how agentic systems change the way we build.
                 </p>
               </div>
             </Reveal>
@@ -435,8 +456,12 @@ export default function Home() {
                 remarkable.
               </h2>
               <p className="mx-auto mt-6 max-w-xl text-lg text-sand">
-                I’m always eager to connect with others who share a passion for
-                technology and innovation.
+                I like talking to people building real things.
+              </p>
+              <p className="mx-auto mt-4 max-w-xl text-sand">
+                My LinkedIn profile carries an open-to-work badge for recruiters.
+                If you are hiring senior product leadership in deep tech,
+                semiconductors, or connectivity, I would like to hear from you.
               </p>
               <div className="mt-10 flex flex-wrap justify-center gap-4">
                 <a
@@ -449,6 +474,13 @@ export default function Home() {
                   LinkedIn
                 </a>
                 <a
+                  href="/files/Assaf-Mevorach-Resume.pdf"
+                  className="flex items-center gap-2 rounded-full border border-white/15 px-8 py-3.5 text-sm font-semibold text-cream transition-colors hover:border-glow hover:text-glow"
+                >
+                  <DownloadIcon className="h-4 w-4" />
+                  R&#233;sum&#233;
+                </a>
+                <a
                   href="https://github.com/assafmevorach"
                   target="_blank"
                   rel="noreferrer"
@@ -456,6 +488,15 @@ export default function Home() {
                 >
                   <GitHubIcon className="h-4 w-4" />
                   GitHub
+                </a>
+                <a
+                  href="https://soundcloud.com/assaf-mevorach"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 rounded-full border border-white/15 px-8 py-3.5 text-sm font-semibold text-cream transition-colors hover:border-glow hover:text-glow"
+                >
+                  <SoundCloudIcon className="h-4 w-4" />
+                  SoundCloud
                 </a>
               </div>
             </Reveal>
@@ -465,7 +506,36 @@ export default function Home() {
 
       <footer className="border-t border-white/5 py-8">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 text-sm text-sand/70">
-          <span>© 2026 Assaf Mevorach</span>
+          <span>&#169; 2026 Assaf Mevorach</span>
+          <div className="flex items-center gap-5">
+            <a
+              href="https://www.linkedin.com/in/assafm"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="text-sand/70 transition-colors hover:text-glow"
+            >
+              <LinkedInIcon className="h-5 w-5" />
+            </a>
+            <a
+              href="https://github.com/assafmevorach"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="text-sand/70 transition-colors hover:text-glow"
+            >
+              <GitHubIcon className="h-5 w-5" />
+            </a>
+            <a
+              href="https://soundcloud.com/assaf-mevorach"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="SoundCloud"
+              className="text-sand/70 transition-colors hover:text-glow"
+            >
+              <SoundCloudIcon className="h-5 w-5" />
+            </a>
+          </div>
           <span>Portland, Oregon</span>
         </div>
       </footer>
